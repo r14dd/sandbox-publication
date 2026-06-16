@@ -214,7 +214,7 @@ Hazırda iki məlum boşluq açıq qalır.
 
 ## Bizim yanaşma və alternativlər
 
-Sandbox-ımız spektrdəki ən yüngül variantdır. VM yoxdur, container yoxdur, kernel module yoxdur. Yalnız Linux user-lər, file permission-lar və resource limit-lər. Bu şüurlu kompromisdir: daha güclü izolyasiyadan imtina edərək, sıfır per-session overhead və istənilən Linux admin-in bir günortada audit edə biləcəyi sadə bir sistem əldə etdik.
+Sandbox spektrdəki ən yüngül variantdır. VM yoxdur, container yoxdur, kernel module yoxdur. Yalnız Linux user-lər, file permission-lar və resource limit-lər. Bu şüurlu kompromisdir: daha güclü izolyasiyadan imtina edərək, sıfır per-session overhead və istənilən Linux admin-in bir günortada audit edə biləcəyi sadə bir sistem əldə etdik.
 
 Digər alətlər fərqli kompromislərə gedir.
 
@@ -242,5 +242,3 @@ Sandbox hazırda həll etməyi bildiyimiz problemləri həll edir: cross-tenant 
 Hələ üzərində işlədiyimiz problemlər isə daha çətindir. Network egress üçün per-UID firewall rule-ları tələb olunur, bu da iptables konfiqurasiyasına sahib infrastruktur komandası ilə koordinasiya deməkdir. Prompt injection-ın sənayedə production-ready müdafiəsi hələ mövcud deyil. Bu gün edilə biləcək ən doğru şey blast radius-u məhdudlamaqdır (bunu edirik) və heuristik guardrail-lər əlavə etməkdir (bunu hələ etməmişik). Audit logging isə yalnız agentin nə etdiyini deyil, nə etməyə *cəhd edib* bloklandığını da bütün müdafiə qatlarında, nəzərdən keçirilə bilən formatda qeyd etməlidir.
 
 Həmçinin bir meta-problem var: agentə verilən hər yeni alət (web search, fayl konvertasiyası, database girişi) sandbox-un nəzərə almalı olduğu yeni imkanlar dəsti yaradır. Funksionallıq artdıqca hücum səthi də genişlənir.
-
-Bu problemləri həll edəndə yazacağıq.
